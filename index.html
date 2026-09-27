@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEARDOG | The Next Legendary Dog on Solana</title>
+  <meta name="description" content="NEARDOG is the next legendary dog on Solana, powered by memes, community energy, and nonstop onchain chaos.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mint: {
+              50: "#f3fff8",
+              100: "#dcffe9",
+              200: "#b4ffd4",
+              300: "#6dffb0",
+              400: "#3eea96",
+              500: "#14d478",
+              600: "#0aa85e",
+              700: "#0b6b40",
+            },
+            ink: "#050807",
+          },
+          fontFamily: {
+            display: ['"Lilita One"', "cursive"],
+            body: ["Nunito", "sans-serif"],
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(62,234,150,0.45), 0 0 36px rgba(62,234,150,0.28)",
+            glowLg: "0 0 0 1px rgba(62,234,150,0.35), 0 20px 70px rgba(62,234,150,0.22)",
+          },
+          keyframes: {
+            marquee: {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(-50%)" },
+            },
+            floaty: {
+              "0%, 100%": { transform: "translateY(0) rotate(-2deg)" },
+              "50%": { transform: "translateY(-12px) rotate(2deg)" },
+            },
+          },
+          animation: {
+            marquee: "marquee 28s linear infinite",
+            floaty: "floaty 4.5s ease-in-out infinite",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    ::selection { background: #3eea96; color: #04140c; }
+    .font-display { font-family: "Lilita One", cursive; }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee,
+      .animate-floaty { animation: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-ink font-body text-white antialiased">
+  <video
+    class="pointer-events-none fixed inset-0 -z-20 h-full w-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    aria-hidden="true"
+  >
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-ink/85 via-ink/60 to-ink/90"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_15%_0%,rgba(62,234,150,0.28),transparent_36%),radial-gradient(circle_at_90%_80%,rgba(34,211,238,0.14),transparent_32%)]"></div>
+
+  <header class="sticky top-0 z-50 border-b border-mint-400/20 bg-ink/55 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
+      <a href="#top" class="flex items-center gap-2.5">
+        <img src="logo.png" alt="NEARDOG logo" class="h-12 w-12 object-contain mix-blend-screen">
+        <span class="font-display text-2xl tracking-wide text-mint-300">NEARDOG</span>
+      </a>
+      <nav class="ml-4 hidden items-center gap-6 text-sm font-extrabold text-mint-100/80 md:flex" aria-label="Page">
+        <a href="#legend" class="transition hover:text-mint-300">The Legend</a>
+        <a href="#how-to-buy" class="transition hover:text-mint-300">How to Buy</a>
+        <a href="#chart" class="transition hover:text-mint-300">Chart</a>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="https://t.me/NEARDOG_portal" target="_blank" rel="noopener noreferrer" aria-label="NEARDOG on Telegram" class="grid h-11 w-11 place-items-center overflow-hidden rounded-full border border-mint-400/40 bg-black/40 transition hover:scale-105 hover:shadow-glow">
+          <img src="tg.png" alt="" class="h-11 w-11 object-cover">
+        </a>
+        <a href="https://x.com/NEARDOG_x" target="_blank" rel="noopener noreferrer" aria-label="NEARDOG on X" class="grid h-11 w-11 place-items-center overflow-hidden rounded-full border border-mint-400/40 bg-black transition hover:scale-105 hover:shadow-glow">
+          <img src="x.png" alt="" class="h-6 w-6 object-contain">
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-mint-400 px-4 py-2.5 font-display text-lg text-ink shadow-glow transition hover:bg-mint-300 sm:inline-block">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:pt-16">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-mint-400/40 bg-mint-400/10 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.22em] text-mint-300">
+          <span class="h-2 w-2 rounded-full bg-mint-400 shadow-[0_0_10px_#3eea96]"></span>
+          $NEARDOG · Solana
+        </p>
+        <h1 class="mt-5 font-display text-6xl leading-[0.9] text-white sm:text-7xl lg:text-8xl">
+          NEAR<span class="text-mint-300">DOG</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-lg font-bold leading-relaxed text-mint-50/90 sm:text-xl">
+          NEARDOG is the next legendary dog on Solana, powered by memes, community energy, and nonstop onchain chaos.
+        </p>
+
+        <div class="relative mt-8 max-w-xl rounded-[1.6rem] border-2 border-mint-300/70 bg-black/55 p-4 shadow-glow backdrop-blur-md">
+          <div class="absolute -top-3 left-8 h-6 w-6 rounded-full border-2 border-mint-300 bg-ink shadow-[inset_0_0_0_3px_rgba(62,234,150,0.35)]" aria-hidden="true"></div>
+          <p class="pl-1 text-xs font-extrabold uppercase tracking-[0.2em] text-mint-300">Contract Address</p>
+          <div class="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <p id="ca-value" class="min-w-0 flex-1 truncate rounded-xl bg-ink/80 px-4 py-3 font-mono text-base font-bold text-mint-100 sm:text-lg">TBA</p>
+            <button type="button" data-label="Copy CA" onclick="copyCA(this)" class="rounded-xl bg-mint-400 px-5 py-3 font-display text-lg text-ink transition hover:bg-mint-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mint-200">
+              Copy CA
+            </button>
+          </div>
+        </div>
+        <p id="copy-status" class="sr-only" role="status"></p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-mint-400 px-7 py-3.5 font-display text-2xl text-ink shadow-glow transition hover:-translate-y-0.5 hover:bg-mint-300">
+            Buy Now
+          </a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border-2 border-mint-300 bg-black/40 px-7 py-3.5 font-display text-2xl text-mint-200 backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-mint-400 hover:text-ink">
+            Chart
+          </a>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-lg">
+        <div class="absolute -inset-6 rounded-full bg-mint-400/20 blur-3xl" aria-hidden="true"></div>
+        <img src="logo.png" alt="NEARDOG, the mint green legendary dog" class="relative mx-auto w-[min(100%,420px)] animate-floaty object-contain mix-blend-screen drop-shadow-[0_0_40px_rgba(62,234,150,0.55)]">
+        <div class="absolute -right-1 top-4 hidden h-24 w-24 rotate-12 place-items-center rounded-full border-2 border-dashed border-mint-300 bg-ink/80 text-center font-display text-sm leading-none text-mint-300 sm:grid">
+          GOOD<br>DOG<br>ENERGY
+        </div>
+      </div>
+    </section>
+
+    <div class="border-y border-mint-400/25 bg-mint-400 text-ink" aria-hidden="true">
+      <div class="flex overflow-hidden">
+        <div class="flex min-w-full shrink-0 animate-marquee gap-8 py-3 font-display text-xl tracking-wide">
+          <span class="px-4">$NEARDOG</span><span>WOOF</span><span>SOLANA</span><span>MEMES</span><span>COMMUNITY ENERGY</span><span>ONCHAIN CHAOS</span><span>LEGENDARY DOG</span><span>THE PACK</span>
+          <span class="px-4">$NEARDOG</span><span>WOOF</span><span>SOLANA</span><span>MEMES</span><span>COMMUNITY ENERGY</span><span>ONCHAIN CHAOS</span><span>LEGENDARY DOG</span><span>THE PACK</span>
+        </div>
+        <div class="flex min-w-full shrink-0 animate-marquee gap-8 py-3 font-display text-xl tracking-wide">
+          <span class="px-4">$NEARDOG</span><span>WOOF</span><span>SOLANA</span><span>MEMES</span><span>COMMUNITY ENERGY</span><span>ONCHAIN CHAOS</span><span>LEGENDARY DOG</span><span>THE PACK</span>
+          <span class="px-4">$NEARDOG</span><span>WOOF</span><span>SOLANA</span><span>MEMES</span><span>COMMUNITY ENERGY</span><span>ONCHAIN CHAOS</span><span>LEGENDARY DOG</span><span>THE PACK</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <figure class="overflow-hidden rounded-[2rem] border border-mint-300/40 shadow-glowLg">
+        <img src="banner.jpg" alt="NEARDOG sprinting through a neon Solana skyline" class="h-auto w-full object-cover">
+      </figure>
+    </section>
+
+    <section id="legend" class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
+      <div class="max-w-3xl">
+        <p class="font-display text-mint-300">The Legend</p>
+        <h2 class="mt-2 font-display text-4xl leading-none text-white sm:text-6xl">A legendary dog. A louder pack.</h2>
+        <p class="mt-4 text-lg font-bold leading-relaxed text-mint-50/85">
+          NEARDOG is the next legendary dog on Solana, powered by memes, community energy, and nonstop onchain chaos. No leash. No quiet charts. Just the pack, sprinting in public.
+        </p>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <article class="rounded-[1.6rem] border border-mint-400/30 bg-black/50 p-6 shadow-glow backdrop-blur-md transition hover:-translate-y-1">
+          <p class="font-display text-3xl text-mint-300">01</p>
+          <h3 class="mt-3 font-display text-3xl">Memes</h3>
+          <p class="mt-2 font-bold leading-relaxed text-mint-50/80">The timeline is the kennel. $NEARDOG moves where the joke hits first and the woof never clocks out.</p>
+        </article>
+        <article class="rounded-[1.6rem] border border-mint-400/30 bg-black/50 p-6 shadow-glow backdrop-blur-md transition hover:-translate-y-1">
+          <p class="font-display text-3xl text-mint-300">02</p>
+          <h3 class="mt-3 font-display text-3xl">Community Energy</h3>
+          <p class="mt-2 font-bold leading-relaxed text-mint-50/80">One pack, loud on purpose. Telegram and X are where the bark gets organized and the legend spreads.</p>
+        </article>
+        <article class="rounded-[1.6rem] border border-mint-400/30 bg-black/50 p-6 shadow-glow backdrop-blur-md transition hover:-translate-y-1">
+          <p class="font-display text-3xl text-mint-300">03</p>
+          <h3 class="mt-3 font-display text-3xl">Onchain Chaos</h3>
+          <p class="mt-2 font-bold leading-relaxed text-mint-50/80">Solana speed, trades in the open, and a dog that does not sit. Chaos is the whole point.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div class="overflow-hidden rounded-[2rem] border border-mint-300/35 bg-black/45 p-6 shadow-glowLg backdrop-blur-md sm:p-10">
+        <p class="font-display text-mint-300">How to Buy</p>
+        <h2 class="mt-2 max-w-3xl font-display text-4xl leading-none text-white sm:text-6xl">How to buy $NEARDOG on Solana</h2>
+        <p class="mt-4 max-w-2xl text-lg font-bold text-mint-50/85">Four steps. A wallet, some SOL, the contract, and you are in the pack.</p>
+
+        <ol class="mt-8 grid gap-4 lg:grid-cols-4">
+          <li class="rounded-3xl border border-mint-400/25 bg-ink/70 p-5">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-mint-400 font-display text-2xl text-ink">1</div>
+            <h3 class="mt-4 font-display text-2xl text-mint-200">Get a Wallet</h3>
+            <p class="mt-2 text-sm font-bold leading-relaxed text-mint-50/75">Install Phantom or Solflare and create a Solana wallet. Write down the seed phrase and keep it offline.</p>
+          </li>
+          <li class="rounded-3xl border border-mint-400/25 bg-ink/70 p-5">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-mint-400 font-display text-2xl text-ink">2</div>
+            <h3 class="mt-4 font-display text-2xl text-mint-200">Fund with SOL</h3>
+            <p class="mt-2 text-sm font-bold leading-relaxed text-mint-50/75">Buy SOL and send it to your wallet. Leave a little extra so network fees do not stall the swap.</p>
+          </li>
+          <li class="rounded-3xl border border-mint-400/25 bg-ink/70 p-5">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-mint-400 font-display text-2xl text-ink">3</div>
+            <h3 class="mt-4 font-display text-2xl text-mint-200">Copy the CA</h3>
+            <p class="mt-2 text-sm font-bold leading-relaxed text-mint-50/75">Copy the $NEARDOG contract address and match it before you trade. The dog tag above is ready when you are.</p>
+            <button type="button" data-label="Copy CA" onclick="copyCA(this)" class="mt-4 rounded-full border border-mint-300 px-4 py-2 font-display text-lg text-mint-200 transition hover:bg-mint-400 hover:text-ink">
+              Copy CA
+            </button>
+          </li>
+          <li class="rounded-3xl border border-mint-400/25 bg-ink/70 p-5">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-mint-400 font-display text-2xl text-ink">4</div>
+            <h3 class="mt-4 font-display text-2xl text-mint-200">Swap for $NEARDOG</h3>
+            <p class="mt-2 text-sm font-bold leading-relaxed text-mint-50/75">Open Buy Now, swap SOL for $NEARDOG, and step into the onchain chaos with the rest of the pack.</p>
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-full bg-mint-400 px-4 py-2 font-display text-lg text-ink transition hover:bg-mint-300">Buy Now</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="chart" class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+      <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-display text-mint-300">Live Chart</p>
+          <h2 class="mt-2 font-display text-4xl leading-none text-white sm:text-6xl">Watch the pack run</h2>
+        </div>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit items-center justify-center rounded-full border-2 border-mint-300 px-6 py-3 font-display text-xl text-mint-200 transition hover:bg-mint-400 hover:text-ink">
+          Chart
+        </a>
+      </div>
+      <div class="overflow-hidden rounded-[1.8rem] border border-mint-300/40 bg-black/60 shadow-glowLg">
+        <div class="relative w-full pb-[130%] md:pb-[62%]">
+          <iframe
+            title="NEARDOG chart on Dexscreener"
+            src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+            class="absolute inset-0 h-full w-full border-0"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+      <div class="rounded-[2rem] border border-mint-300/40 bg-gradient-to-br from-mint-400/20 via-black/60 to-black/70 p-8 text-center shadow-glowLg sm:p-12">
+        <h2 class="font-display text-4xl text-white sm:text-6xl">Join the kennel</h2>
+        <p class="mx-auto mt-3 max-w-xl font-bold text-mint-50/85">Memes, community energy, and nonstop onchain chaos. The legendary dog is already running.</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a href="https://t.me/NEARDOG_portal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-mint-300/50 bg-black/50 py-2 pl-2 pr-5 font-display text-xl text-white transition hover:border-mint-300 hover:shadow-glow">
+            <img src="tg.png" alt="" class="h-10 w-10 rounded-full object-cover">
+            Telegram
+          </a>
+          <a href="https://x.com/NEARDOG_x" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-mint-300/50 bg-black/50 py-2 pl-2 pr-5 font-display text-xl text-white transition hover:border-mint-300 hover:shadow-glow">
+            <img src="x.png" alt="" class="h-10 w-10 rounded-full bg-black object-contain p-2">
+            X
+          </a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full bg-mint-400 px-6 py-3 font-display text-2xl text-ink transition hover:bg-mint-300">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-mint-400/20 bg-ink/80">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 object-contain mix-blend-screen">
+        <div>
+          <p class="font-display text-xl text-mint-300">NEARDOG</p>
+          <p class="text-sm font-bold text-mint-50/60">Symbol $NEARDOG · Solana</p>
+        </div>
+      </div>
+      <p class="max-w-md text-sm font-bold text-mint-50/55">$NEARDOG is a meme coin. Nothing here is financial advice. Check the contract, then run with the pack.</p>
+    </div>
+  </footer>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-mint-400/30 bg-ink/85 p-3 backdrop-blur-xl sm:hidden">
+    <div class="grid grid-cols-2 gap-2">
+      <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full bg-mint-400 py-3 text-center font-display text-xl text-ink">Buy Now</a>
+      <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border border-mint-300 py-3 text-center font-display text-xl text-mint-200">Chart</a>
+    </div>
+  </div>
+  <div class="h-20 sm:hidden" aria-hidden="true"></div>
+
+  <script>
+    async function copyCA(button) {
+      const ca = document.getElementById("ca-value").textContent.trim();
+      try {
+        await navigator.clipboard.writeText(ca);
+      } catch (error) {
+        const area = document.createElement("textarea");
+        area.value = ca;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        document.body.removeChild(area);
+      }
+      const status = document.getElementById("copy-status");
+      status.textContent = "Contract address copied";
+      const label = button.dataset.label || "Copy CA";
+      button.textContent = "Copied!";
+      window.setTimeout(() => {
+        button.textContent = label;
+        status.textContent = "";
+      }, 1600);
+    }
+  </script>
+</body>
+</html>
